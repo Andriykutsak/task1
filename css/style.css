@@ -77,7 +77,7 @@ header .fx-container {
       top: 0px;
       right: 0px;
       height: 2px;
-      width: 85px;
+      width: 100px;
       background-color: #fff; }
     header .fx-container .head-block:before {
       content: " ";
@@ -85,7 +85,7 @@ header .fx-container {
       top: 0px;
       left: 0px;
       height: 2px;
-      width: 105px;
+      width: 100px;
       background-color: #fff; }
     header .fx-container .head-block .num {
       font-family: "parangon",tahoma;
@@ -106,7 +106,7 @@ header .fx-container {
       height: 35px;
       width: 35px;
       top: -65px;
-      left: 48%; }
+      left: 44%; }
 
 .studio {
   padding: 0 5px 250px 5px; }
@@ -250,6 +250,25 @@ header .fx-container {
       margin: 0 10px;
       padding: 75px 23px 35px 23px;
       margin-bottom: 75px; }
+      .dev .dev-container .block .btn {
+        overflow: hidden;
+        position: relative;
+        width: 210px;
+        height: 60px;
+        z-index: 11; }
+        .dev .dev-container .block .btn .circle {
+          border-radius: 50%;
+          transform: scale(2);
+          position: absolute;
+          z-index: -1;
+          animation: circle 0.5s; }
+@keyframes circle {
+  from {
+    transform: scale(0);
+    opacity: 1; }
+  to {
+    transform: scale(2);
+    opacity: 0; } }
       .dev .dev-container .block:nth-child(1) {
         background-image: url("../img/l-page-bg.jpg"); }
         .dev .dev-container .block:nth-child(1) .dev-head {
@@ -600,6 +619,44 @@ header .fx-container {
   header .head {
     font-size: 30px; }
 
+  .studio .res-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 99; }
+    .studio .res-btn .item {
+      height: 3px;
+      width: 90%;
+      background-color: #000;
+      margin: 7px auto; }
+  .studio nav {
+    position: relative; }
+  .studio .studio-menu nav .studio-menu-wrap {
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(0%);
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    z-index: 3;
+    transition: 0.4s; }
+    .studio .studio-menu nav .studio-menu-wrap li a {
+      color: #fff; }
+    .studio .studio-menu nav .studio-menu-wrap li {
+      text-align: center; }
+      .studio .studio-menu nav .studio-menu-wrap li:hover {
+        border-bottom: 2px solid #f6ae48; }
+        .studio .studio-menu nav .studio-menu-wrap li:hover a {
+          color: #f6ae48; }
+  .studio .studio-menu nav .hide {
+    position: absolute;
+    transform: translateX(-100%);
+    transition: 0.4s; }
+
   .srch-container {
     flex-direction: column;
     align-items: center; }
@@ -633,6 +690,15 @@ header .fx-container {
 
   .care .container .care-head, .care .container .care-desc {
     padding: 0 5px;
-    text-align: center; } }
+    text-align: center; }
+
+  .lst-projects .lst-block {
+    flex-direction: column;
+    width: 100%; }
+    .lst-projects .lst-block .lst-img-25 {
+      width: 100%; }
+    .lst-projects .lst-block img {
+      height: auto;
+      width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

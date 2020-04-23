@@ -95,7 +95,7 @@ header{
                     right: 0px;
                  
                     height: 2px;
-                    width: 85px;
+                    width: 100px;
                     background-color: #fff;
                 }
                 &:before{    content:" ";
@@ -104,7 +104,7 @@ header{
                     left: 0px;
                 
                     height: 2px;
-                    width: 105px;
+                    width: 100px;
                     background-color: #fff;
                   
                 }               
@@ -130,7 +130,7 @@ header{
                 height: 35px;
                 width: 35px;
                 top: -65px;
-                left: 48%;  
+                left: 44%;  
 
               
                 }
@@ -320,6 +320,32 @@ header{
                     margin: 0 10px;
                 padding: 75px 23px 35px 23px;
                 margin-bottom: 75px;
+                .btn{
+                     overflow: hidden;
+                        position: relative;
+                        width: 210px;
+                        height: 60px;
+                        z-index: 11;
+                      
+                        .circle{
+                            border-radius: 50%;
+                            
+                            transform: scale(2);
+                            position: absolute;
+                            z-index: -1;
+                            animation: circle 0.5s;                         
+                        }
+                        @keyframes circle{
+                            from{
+                            transform: scale(0);
+                            opacity: 1;
+                            }
+                            to{
+                            transform: scale(2);
+                            opacity: 0;
+                            }
+                        }
+                }
                 &:nth-child(1){
                     .dev-head{
                         font-family: 'futura';
@@ -328,6 +354,7 @@ header{
                         border-bottom: 1px solid #fff;
                     }
                     .btn{
+
                         border: 2px solid #00b9e7;
                     }
                 background-image: url('../img/l-page-bg.jpg');
@@ -747,9 +774,60 @@ header{
     }
 }
 @media screen and (max-width: 750px){
+
     header{
         .head{
             font-size: 30px;
+        }
+    }
+    .studio{
+        .res-btn{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            width: 40px;
+            height: 40px;
+            z-index: 99;
+
+          
+            .item{
+                height: 3px;
+                width: 90%;
+                background-color: #000;
+                margin: 7px auto;
+            }
+        }
+        nav{
+            position: relative;
+        }
+        .studio-menu nav .studio-menu-wrap{
+            position: absolute;
+            flex-direction: column;
+            justify-content: center;
+             transform: translateX(0%);
+             background-color: rgba(0,0,0,0.4);
+             width: 100%;
+             z-index: 3;
+             transition: 0.4s;
+            li a{
+                color: #fff;
+             }
+              li{
+           text-align: center;
+           &:hover{
+          a{  color:#f6ae48;}
+            border-bottom: 2px solid #f6ae48;
+          
+        }
+        }}
+       .studio-menu nav .hide{
+        position: absolute;
+        transform: translateX(-100%);
+        transition: 0.4s;
+
+       
         }
     }
     .srch-container{
@@ -778,7 +856,7 @@ header{
 }
 @media screen and (max-width: 500px){
     .studio{
-                .studio-head{
+            .studio-head{
         margin-bottom: 20px;
     }
         .fx{
@@ -807,4 +885,16 @@ header{
             text-align: center;
         }
     }
-   }}
+   }
+ .lst-projects .lst-block{
+        flex-direction: column;
+        width: 100%;
+        .lst-img-25{
+            width: 100%;
+        }
+        img{
+            height: auto;
+            width: 100%;
+        }
+    }
+}
